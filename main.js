@@ -3,39 +3,38 @@ addEventListener("DOMContentLoaded", (e) => {
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let veh = document.getElementById("num1").value;
-
-        let tur = 0;
-        let aut = 0;
-        let cam = 0;
-        let mot = 0;
         let con = 1;
+        let amarilla=0;
+        let rosa=0;
+        let roja=0;
+        let verde=0;
+        let azul=0;
 
-        while (veh >= con) {
-            let veh = prompt("Tipo de vehiculo que pasa(turismo, autobus, camion o motocicleta.): ");
+        let cant = document.getElementById("num1").value;
 
-            if (veh == "turismo") {
-                tur ++;
+        while (con <= cant) {
+            let Nplaca = prompt('vehiculo #' + con + ' \n ingrese el ultimo dijito de su placa: ')
+
+            if (Nplaca == 1 || Nplaca == 2) {
+                amarilla ++;
             }
-
-            else if (veh == "autobus") {
-                aut ++;
+            else if(Nplaca == 3 || Nplaca == 4){
+                rosa ++;
             }
-
-            else if (veh == "camion") {
-                cam ++;
+            else if (Nplaca == 5 || Nplaca == 6){
+                roja ++;
             }
-
-            else if (veh == "moto") {
-                mot ++;
+            else if(Nplaca == 7 || Nplaca == 8){
+                verde ++;
             }
+            else {
+                azul ++;
+            }
+            con ++;
 
-            con++;
+            
         }
-
-        alert(`La cantidad de autobuses son: ${aut}`);
-        alert(`La cantidad de turismo son: ${tur}`);
-        alert(`La cantidad de camion son: ${cam}`);
-        alert(`La cantidad de motocicleta son: ${mot}`);
+        alert('Número de placas color amarillo: '+amarilla+'\nNúmero de placas color rosa: '+rosa+'\nNúmero de placas color rojo: '+roja+'\nNúmero de placas color verde: '+verde+'\nNúmero de placas color azul: '+azul);
     })
+    
 })
