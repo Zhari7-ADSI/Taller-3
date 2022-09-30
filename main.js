@@ -24,8 +24,8 @@ addEventListener("DOMContentLoaded", (e) => {
             let tot_suel = suel + total
 
             alert(`El sueldo del empleado es: ${suel}`);
-            alert(`Vendio un total de comiciones de: ${total}`);
-            alert(`El sueldo del empleado total es: ${tot_suel}`);
+            alert(`Vendió un total de comisiones de: ${total}`);
+            alert(`El sueldo del empleado es: ${tot_suel}`);
 
             cont++;
         }
