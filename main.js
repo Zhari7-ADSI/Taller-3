@@ -3,17 +3,17 @@ addEventListener("DOMContentLoaded", (e) => {
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let cont = 1;
-        let aprend = 5;
+        let people = 40, woman = 1, men = 7, sum = 0;
 
-        while (cont <= aprend){
-            let nom = prompt(`Ingrese el nombre del estudiante ${cont}`);
-            let ape = prompt(`Ingrese el apellido del estudiante ${cont}`);
-            let edad = parseInt(prompt(`Ingrese la edad del estudiante ${cont}`));
-            let prom = parseFloat(prompt(`Ingrese el promedio del estudiante ${cont}`));
+        while (sum <= people) {
+            sum = woman + men;
+            woman += 1;
+            men += 1;
 
-            cont += 1;
-            alert(`el promedio del estudiante llamado: ${nom} ${ape} es de: ${prom}`);
+            alert(`La cantidad de mujeres es de: ${woman}`);
+            alert(`La cantidad de hombres es de: ${men}`);
+            alert(`La cantidad total de mujeres es de: ${woman}`);
+            alert(`El total de personas es de: ${sum}`);
         }
     })
 })
