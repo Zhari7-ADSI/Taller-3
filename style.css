@@ -1,7 +1,7 @@
 * {
     font-family: monospace;
-    font-weight: 100;
-    font-size: 20px;
+        font-weight: 100;
+        font-size: 20px;
 }
 
 body {
@@ -22,7 +22,7 @@ div {
 .input {
     width: 45vh;
     width: 37vh;
-    border-radius: 7px;
+    border-radius: 17px;
 }
 
 .boton:hover {
