@@ -1,17 +1,26 @@
-let cont = 1;
-let cali = 0;
+addEventListener("DOMContentLoaded", (e) => {
+    let formulario = document.getElementById('form');
+    formulario.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-let cant = parseInt(prompt("Ingrese la cantidad de las gallinas"));
+        let cont = 1;
+        let proce = 10;
+        let sum, rest, div, multi;
 
-while (cont <= cant) {
-    let peso = parseInt(prompt(`Ingrese el peso de la gallina ${cont}`));
-    let altu = parseInt(prompt(`Ingrese la altura de la gallina ${cont}`));
-    let huevos = parseInt(prompt(`Ingrese la cantidad de huevos ${cont}`));
-    cali += (peso * altu) / huevos;
-    cont++;
-}
+        while (cont <= proce) {
+            let num1 = parseInt(prompt("Ingrese el primer número: "));
+            let num2 = parseInt(prompt("Ingrese el segundo número: "));
 
-let prom = cali * cant;
+            sum = num1 + num2;
+            rest = num1 - num2;
+            div = num1 / num2;
+            multi = num1 * num2;
 
-alert(cali);
-alert(prom);
+            cont += 1;
+            alert(` ${sum}
+${rest}
+${div}
+${multi}`);
+        }
+    })
+})

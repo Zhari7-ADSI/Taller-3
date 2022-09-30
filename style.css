@@ -18,3 +18,15 @@ div {
     text-align: center;
     box-shadow: 20px 20px 20px #000;
 }
+
+.input {
+    width: 45vh;
+    width: 37vh;
+    border-radius: 7px;
+}
+
+.boton:hover {
+    color: #fff;
+    background-color: #000;
+    transition: 0.5s;
+}
