@@ -4,23 +4,16 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
 
         let cont = 1;
-        let proce = 10;
-        let sum, rest, div, multi;
+        let aprend = 5;
 
-        while (cont <= proce) {
-            let num1 = parseInt(prompt("Ingrese el primer número: "));
-            let num2 = parseInt(prompt("Ingrese el segundo número: "));
-
-            sum = num1 + num2;
-            rest = num1 - num2;
-            div = num1 / num2;
-            multi = num1 * num2;
+        while (cont <= aprend){
+            let nom = prompt(`Ingrese el nombre del estudiante ${cont}`);
+            let ape = prompt(`Ingrese el apellido del estudiante ${cont}`);
+            let edad = parseInt(prompt(`Ingrese la edad del estudiante ${cont}`));
+            let prom = parseFloat(prompt(`Ingrese el promedio del estudiante ${cont}`));
 
             cont += 1;
-            alert(` ${sum}
-${rest}
-${div}
-${multi}`);
+            alert(`el promedio del estudiante llamado: ${nom} ${ape} es de: ${prom}`);
         }
     })
 })
