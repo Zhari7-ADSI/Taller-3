@@ -3,26 +3,15 @@ addEventListener("DOMContentLoaded", (e) => {
     formulario.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        let cont = 1, alum = 2;
+        let cont = 1, avión = 20, proyec = 10;
 
-        while (cont <= alum){
-            let not1 = parseFloat(prompt(`Ingrese la primera nota del alumno ${cont}`));
-            let not2 = parseFloat(prompt(`Ingrese la segunda nota del alumno ${cont}`));
-            let not3 = parseFloat(prompt(`Ingrese la tercera nota del alumno ${cont}`));
-            let not4 = parseFloat(prompt(`Ingrese la cuarta nota del alumno ${cont}`));
-            let not5 = parseFloat(prompt(`Ingrese la quinta nota del alumno ${cont}`));
+        while ((avión - proyec) <= 10000){
+            avión = avión + 20;
+            proyec = proyec + 10;
+            cont+= 1;
 
-            let nota = not1 + not2 + not3 + not4 + not5;
-            let prom = nota / 5;
-
-            if (prom < 3){
-                alert(`El alumno no puede presentar el examen, su promedio fué: ${prom}`);
-            }
-            else{
-                alert(`El alumno puede presentar el examen, su promedio fué: ${prom}`);
-            }
-            cont ++;
-        } 
-        
+            alert(`La distancia del avión ${cont} es: ${avión}`);
+            alert(`La distancia del proyectil ${cont} es: ${proyec}`);
+        }
     })
 })
