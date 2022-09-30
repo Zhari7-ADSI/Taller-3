@@ -4,28 +4,30 @@ addEventListener("DOMContentLoaded", (e) => {
         e.preventDefault();
 
         let cont = 1;
-        let alum = parseInt(prompt("Ingrese la cantidad de alumnos: "));
+        let vend = parseInt(prompt("Ingrese la cantidad de vendedores"));
 
-        while (cont <= alum) {
+        while (cont <= vend) {
+            let suel = parseFloat(prompt("Ingrese el sueldo"));
+            let vent1 = parseFloat(prompt("Ingrese la venta 1"));
 
-            let cred1 = parseInt(prompt(`Ingrese los creditos de la materia de fundamento: ${cont} `));
-            let not1 = parseFloat(prompt(`Ingrese la nota de la materia de fundamento: ${cont}`));
+            let com1 = vent1 * 0.1;
+            let sum1 = vent1 + com1;
+            let vent2 = parseFloat(prompt("Ingrese la venta 2"));
 
-            let cred2 = parseInt(prompt(`Ingrese los creditos de la materia de bd: ${cont}`));
-            let not2 = parseFloat(prompt(`Ingrese la nota de la materia de bd: ${cont}`));
+            let com2 = vent2 * 0.1;
+            let sum2 = vent2 + com2;
+            let vent3 = parseFloat(prompt("Ingrese la venta 3"));
 
-            let cred3 = parseInt(prompt(`Ingrese los creditos de la materia de ética: ${cont}`));
-            let not3 = parseFloat(prompt(`Ingrese la nota de la materia de ética: ${cont}`));
+            let com3 = vent3 * 0.1;
+            let sum3 = vent3 + com3;
+            let total = sum1 + sum2 + sum3;
+            let tot_suel = suel + total
 
-            let fin = (cred1 * not1) + (cred2 * not2) + (cred3 * not3);
-            let prom_mater = (not1 + not2 + not3) / 3;
-            let tot_fin = fin + prom_mater;
-            let sum_cred = cred1 + cred2 + cred3;
-            let tot_nota = tot_fin / sum_cred;
+            alert(`El sueldo del empleado es: ${suel}`);
+            alert(`Vendio un total de comiciones de: ${total}`);
+            alert(`El sueldo del empleado total es: ${tot_suel}`);
 
             cont++;
-
-            alert(`El promedio del estudiante es: ${tot_nota}`);
         }
     })
 })
